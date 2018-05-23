@@ -31,6 +31,7 @@
 - when:
   - patch_output.raw_patch is defined
   - patch_output.raw_patch | length > 0
+  - patch is defined
   block:
   - slurp:
       src: "{{ configmap_new_file }}"
